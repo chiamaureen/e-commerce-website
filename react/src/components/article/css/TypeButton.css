@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Serif TC', serif;
+}
+
+.typeUl {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 80px;
+}
+
+.typeUl .typeLi {
+  list-style: none;
+}
+.typeUl .typeLi .typeButton {
+  padding: 3px 8px;
+  border-radius: 3px;
+  background-color: #00273c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.typeUl .typeLi .typeButton:focus {
+  transform: scale(1.2);
+  /* border: 2px solid #080252; */
+  /* box-shadow: 0 0 2px 3px rgb(170, 168, 168); */
+}

@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Serif TC', serif;
+}
+
+h1 {
+  color: #00273c;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h2 {
+  color: #00273c;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+h3 {
+  color: #00273c;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 45px;
+}
+
+h4 {
+  color: #627a86;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top-250 {
+  width: 1920px;
+  height: 250px;
+}
+
+.top-100 {
+  width: 1920px;
+  height: 100px;
+}
+
+.top-50 {
+  width: 1920px;
+  height: 50px;
+}
+
+.course-submit-form {
+  width: 740px;
+  height: 100%;
+  border: 1px solid #dcd7cc;
+  border-radius: 20px;
+  display: flex;
+  padding: 50px 50px;
+  margin: 0 auto;
+}
+
+.submit-form-actions {
+  text-align: right;
+}
+
+.submit-form-actions .button-submit {
+  width: 125px;
+  height: 70px;
+  color: rgb(255, 255, 255);
+  border-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  background-color: rgb(153,203,119);
+}
+
+.submit-form-actions .button-cancel {
+  width: 200px;
+  height: 70px;
+  color: rgb(19, 19, 19);
+  border-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  background-color: rgb(220,233,215);
+}

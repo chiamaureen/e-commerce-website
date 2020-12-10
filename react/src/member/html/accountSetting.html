@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>accountSetting</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="member.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!--     左邊start     -->
+        <div class="member_navbar">
+          <a style="color: #99cb77; font-size: 20px">會員專區</a>
+          <ul class="nav flex-column">
+            <a class="nav-link active" href="./aboutMe.html">關於我</a>
+            <a class="nav-link" href="./order1.html">購買訂單</a>
+            <a class="nav-link" href="./refund1.html">退款申請</a>
+            <a class="nav-link" href="./level.html">等級權益</a>
+            <a class="nav-link" href="./follow.html">追蹤商品</a>
+            <a class="nav-link" href="#">優惠券</a>
+            <a class="nav-link" href="./accountSetting.html">帳號設定</a>
+            <a class="nav-link" href="#"
+              >幫助
+              <ul>
+                <a class="nav-link" style="font-size: 14px">退換貨通知</a>
+                <a class="nav-link" style="font-size: 14px">常見問答</a>
+              </ul>
+            </a>
+          </ul>
+        </div>
+        <!--     左邊end     -->
+        <!--     右邊start     -->
+        <div class="member_main">
+          <div class="row"><h4>帳號設定</h4></div>
+          <div class="row">
+            <div class="col-6">
+              <form>
+                <div class="form-group">
+                  <label for="nickname">顯示暱稱</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nickname"
+                    placeholder="請輸入暱稱"
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                    >如果不希望真實姓名出現在搜尋頁面，請選擇一個暱稱
+                  </small>
+                </div>
+                <div class="form-group">
+                  <label for="email">電子郵件 </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="emailHelp"
+                    placeholder="請輸入電子郵件"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="gender">性別</label>
+                  <select class="form-control" id="gender">
+                    <option>請選擇性別 :</option>
+                    <option>男</option>
+                    <option>女</option>
+                    <option>其他</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="birth">生日</label>
+                  <br />
+                  <input class="form-control" id="birth" type="date" />
+                </div>
+                <div class="form-group">
+                  <label for="location">所在地</label>
+                  <select class="form-control" id="location">
+                    <option value="TW" selected>TW 台灣</option>
+                    <option value="HK">HK 香港</option>
+                    <option value="CN">CN 中國大陸</option>
+                    <option value="US">US 美國</option>
+                    <option value="JP">JP 日本</option>
+                    <option value="TH">TH 泰國</option>
+                    <option value="MY">MY 馬來西亞</option>
+                    <option value="AU">AU 澳洲</option>
+                    <option value="MO">MO 澳門</option>
+                    <option value="SG">SG 新加坡</option>
+                    <option value="CA">CA 加拿大</option>
+                    <option value="" disabled>-</option>
+                    <option value="AC">AC 阿森松島</option>
+                    <option value="AD">AD 安道爾</option>
+                    <option value="AE">AE 阿拉伯聯合大公國</option>
+                    <option value="AF">AF 阿富汗</option>
+                    <option value="AG">AG 安地卡及巴布達</option>
+                    <option value="AI">AI 安圭拉</option>
+                    <option value="AL">AL 阿爾巴尼亞</option>
+                    <option value="AM">AM 亞美尼亞</option>
+                    <option value="AO">AO 安哥拉</option>
+                    <option value="AQ">AQ 南極洲</option>
+                    <option value="AR">AR 阿根廷</option>
+                    <option value="AS">AS 美屬薩摩亞</option>
+                    <option value="AT">AT 奧地利</option>
+                    <option value="AU">AU 澳洲</option>
+                    <option value="AW">AW 荷屬阿魯巴</option>
+                    <option value="AX">AX 奧蘭群島</option>
+                    <option value="AZ">AZ 亞塞拜然</option>
+                    <option value="BA">BA 波士尼亞與赫塞哥維納</option>
+                    <option value="BB">BB 巴貝多</option>
+                    <option value="BD">BD 孟加拉</option>
+                    <option value="BE">BE 比利時</option>
+                    <option value="BF">BF 布吉納法索</option>
+                    <option value="BG">BG 保加利亞</option>
+                    <option value="BH">BH 巴林</option>
+                    <option value="BI">BI 蒲隆地</option>
+                    <option value="BJ">BJ 貝南</option>
+                    <option value="BL">BL 聖巴瑟米</option>
+                    <option value="BM">BM 百慕達</option>
+                    <option value="BN">BN 汶萊</option>
+                    <option value="BO">BO 玻利維亞</option>
+                    <option value="BQ">BQ 荷蘭加勒比區</option>
+                    <option value="BR">BR 巴西</option>
+                    <option value="BS">BS 巴哈馬</option>
+                    <option value="BT">BT 不丹</option>
+                    <option value="BV">BV 布威島</option>
+                    <option value="BW">BW 波札那</option>
+                    <option value="BY">BY 白俄羅斯</option>
+                    <option value="BZ">BZ 貝里斯</option>
+                    <option value="CA">CA 加拿大</option>
+                    <option value="CC">CC 科科斯（基林）群島</option>
+                    <option value="CD">CD 剛果（金夏沙）</option>
+                    <option value="CF">CF 中非共和國</option>
+                    <option value="CG">CG 剛果（布拉薩）</option>
+                    <option value="CH">CH 瑞士</option>
+                    <option value="CI">CI 象牙海岸</option>
+                    <option value="CK">CK 庫克群島</option>
+                    <option value="CL">CL 智利</option>
+                    <option value="CM">CM 喀麥隆</option>
+                    <option value="CN">CN 中國大陸</option>
+                    <option value="CO">CO 哥倫比亞</option>
+                    <option value="CP">CP 克里派頓島</option>
+                    <option value="CR">CR 哥斯大黎加</option>
+                    <option value="CU">CU 古巴</option>
+                    <option value="CV">CV 維德角</option>
+                    <option value="CW">CW 庫拉索</option>
+                    <option value="CX">CX 聖誕島</option>
+                    <option value="CY">CY 賽普勒斯</option>
+                    <option value="CZ">CZ 捷克共和國</option>
+                    <option value="DE">DE 德國</option>
+                    <option value="DG">DG 迪亞哥加西亞島</option>
+                    <option value="DJ">DJ 吉布地</option>
+                    <option value="DK">DK 丹麥</option>
+                    <option value="DM">DM 多米尼克</option>
+                    <option value="DO">DO 多明尼加共和國</option>
+                    <option value="DZ">DZ 阿爾及利亞</option>
+                    <option value="EA">EA 休達與梅利利亞</option>
+                    <option value="EC">EC 厄瓜多</option>
+                    <option value="EE">EE 愛沙尼亞</option>
+                    <option value="EG">EG 埃及</option>
+                    <option value="EH">EH 西撒哈拉</option>
+                    <option value="ER">ER 厄利垂亞</option>
+                    <option value="ES">ES 西班牙</option>
+                    <option value="ET">ET 衣索比亞</option>
+                    <option value="EU">EU 歐盟</option>
+                    <option value="FI">FI 芬蘭</option>
+                    <option value="FJ">FJ 斐濟</option>
+                    <option value="FK">FK 福克蘭群島</option>
+                    <option value="FM">FM 密克羅尼西亞群島</option>
+                    <option value="FO">FO 法羅群島</option>
+                    <option value="FR">FR 法國</option>
+                    <option value="GA">GA 加彭</option>
+                    <option value="GB">GB 英國</option>
+                    <option value="GD">GD 格瑞那達</option>
+                    <option value="GE">GE 喬治亞共和國</option>
+                    <option value="GF">GF 法屬圭亞那</option>
+                    <option value="GG">GG 根西島</option>
+                    <option value="GH">GH 迦納</option>
+                    <option value="GI">GI 直布羅陀</option>
+                    <option value="GL">GL 格陵蘭</option>
+                    <option value="GM">GM 甘比亞</option>
+                    <option value="GN">GN 幾內亞</option>
+                    <option value="GP">GP 瓜地洛普</option>
+                    <option value="GQ">GQ 赤道幾內亞</option>
+                    <option value="GR">GR 希臘</option>
+                    <option value="GS">GS 南喬治亞與南三明治群島</option>
+                    <option value="GT">GT 瓜地馬拉</option>
+                    <option value="GU">GU 關島</option>
+                    <option value="GW">GW 幾內亞比索</option>
+                    <option value="GY">GY 蓋亞那</option>
+                    <option value="HK">HK 香港</option>
+                    <option value="HM">HM 赫德島和麥克唐納群島</option>
+                    <option value="HN">HN 宏都拉斯</option>
+                    <option value="HR">HR 克羅埃西亞</option>
+                    <option value="HT">HT 海地</option>
+                    <option value="HU">HU 匈牙利</option>
+                    <option value="IC">IC 加那利群島</option>
+                    <option value="ID">ID 印尼</option>
+                    <option value="IE">IE 愛爾蘭</option>
+                    <option value="IL">IL 以色列</option>
+                    <option value="IM">IM 曼島</option>
+                    <option value="IN">IN 印度</option>
+                    <option value="IO">IO 英屬印度洋領地</option>
+                    <option value="IQ">IQ 伊拉克</option>
+                    <option value="IR">IR 伊朗</option>
+                    <option value="IS">IS 冰島</option>
+                    <option value="IT">IT 義大利</option>
+                    <option value="JE">JE 澤西島</option>
+                    <option value="JM">JM 牙買加</option>
+                    <option value="JO">JO 約旦</option>
+                    <option value="JP">JP 日本</option>
+                    <option value="KE">KE 肯亞</option>
+                    <option value="KG">KG 吉爾吉斯</option>
+                    <option value="KH">KH 柬埔寨</option>
+                    <option value="KI">KI 吉里巴斯</option>
+                    <option value="KM">KM 葛摩</option>
+                    <option value="KN">KN 聖克里斯多福及尼維斯</option>
+                    <option value="KP">KP 北韓</option>
+                    <option value="KR">KR 南韓</option>
+                    <option value="KW">KW 科威特</option>
+                    <option value="KY">KY 開曼群島</option>
+                    <option value="KZ">KZ 哈薩克</option>
+                    <option value="LA">LA 寮國</option>
+                    <option value="LB">LB 黎巴嫩</option>
+                    <option value="LC">LC 聖露西亞</option>
+                    <option value="LI">LI 列支敦斯登</option>
+                    <option value="LK">LK 斯里蘭卡</option>
+                    <option value="LR">LR 賴比瑞亞</option>
+                    <option value="LS">LS 賴索托</option>
+                    <option value="LT">LT 立陶宛</option>
+                    <option value="LU">LU 盧森堡</option>
+                    <option value="LV">LV 拉脫維亞</option>
+                    <option value="LY">LY 利比亞</option>
+                    <option value="MA">MA 摩洛哥</option>
+                    <option value="MC">MC 摩納哥</option>
+                    <option value="MD">MD 摩爾多瓦</option>
+                    <option value="ME">ME 蒙特內哥羅</option>
+                    <option value="MF">MF 法屬聖馬丁</option>
+                    <option value="MG">MG 馬達加斯加</option>
+                    <option value="MH">MH 馬紹爾群島</option>
+                    <option value="MK">MK 馬其頓</option>
+                    <option value="ML">ML 馬利</option>
+                    <option value="MM">MM 緬甸</option>
+                    <option value="MN">MN 蒙古</option>
+                    <option value="MO">MO 澳門</option>
+                    <option value="MP">MP 北馬里亞納群島</option>
+                    <option value="MQ">MQ 馬丁尼克島</option>
+                    <option value="MR">MR 茅利塔尼亞</option>
+                    <option value="MS">MS 蒙哲臘</option>
+                    <option value="MT">MT 馬爾他</option>
+                    <option value="MU">MU 模里西斯</option>
+                    <option value="MV">MV 馬爾地夫</option>
+                    <option value="MW">MW 馬拉威</option>
+                    <option value="MX">MX 墨西哥</option>
+                    <option value="MY">MY 馬來西亞</option>
+                    <option value="MZ">MZ 莫三比克</option>
+                    <option value="NA">NA 納米比亞</option>
+                    <option value="NC">NC 新喀里多尼亞</option>
+                    <option value="NE">NE 尼日</option>
+                    <option value="NF">NF 諾福克島</option>
+                    <option value="NG">NG 奈及利亞</option>
+                    <option value="NI">NI 尼加拉瓜</option>
+                    <option value="NL">NL 荷蘭</option>
+                    <option value="NO">NO 挪威</option>
+                    <option value="NP">NP 尼泊爾</option>
+                    <option value="NR">NR 諾魯</option>
+                    <option value="NU">NU 紐埃島</option>
+                    <option value="NZ">NZ 紐西蘭</option>
+                    <option value="OM">OM 阿曼王國</option>
+                    <option value="PA">PA 巴拿馬</option>
+                    <option value="PE">PE 秘魯</option>
+                    <option value="PF">PF 法屬玻里尼西亞</option>
+                    <option value="PG">PG 巴布亞紐幾內亞</option>
+                    <option value="PH">PH 菲律賓</option>
+                    <option value="PK">PK 巴基斯坦</option>
+                    <option value="PL">PL 波蘭</option>
+                    <option value="PM">PM 聖皮埃爾和密克隆群島</option>
+                    <option value="PN">PN 皮特肯群島</option>
+                    <option value="PR">PR 波多黎各</option>
+                    <option value="PS">PS 巴勒斯坦自治區</option>
+                    <option value="PT">PT 葡萄牙</option>
+                    <option value="PW">PW 帛琉</option>
+                    <option value="PY">PY 巴拉圭</option>
+                    <option value="QA">QA 卡達</option>
+                    <option value="QO">QO 大洋洲邊疆群島</option>
+                    <option value="RE">RE 留尼旺</option>
+                    <option value="RO">RO 羅馬尼亞</option>
+                    <option value="RS">RS 塞爾維亞</option>
+                    <option value="RU">RU 俄羅斯</option>
+                    <option value="RW">RW 盧安達</option>
+                    <option value="SA">SA 沙烏地阿拉伯</option>
+                    <option value="SB">SB 索羅門群島</option>
+                    <option value="SC">SC 塞席爾</option>
+                    <option value="SD">SD 蘇丹</option>
+                    <option value="SE">SE 瑞典</option>
+                    <option value="SG">SG 新加坡</option>
+                    <option value="SH">SH 聖赫勒拿島</option>
+                    <option value="SI">SI 斯洛維尼亞</option>
+                    <option value="SJ">SJ 冷岸及央麥恩群島</option>
+                    <option value="SK">SK 斯洛伐克</option>
+                    <option value="SL">SL 獅子山</option>
+                    <option value="SM">SM 聖馬利諾</option>
+                    <option value="SN">SN 塞內加爾</option>
+                    <option value="SO">SO 索馬利亞</option>
+                    <option value="SR">SR 蘇利南</option>
+                    <option value="SS">SS 南蘇丹</option>
+                    <option value="ST">ST 聖多美普林西比</option>
+                    <option value="SV">SV 薩爾瓦多</option>
+                    <option value="SX">SX 荷屬聖馬丁</option>
+                    <option value="SY">SY 敘利亞</option>
+                    <option value="SZ">SZ 史瓦濟蘭</option>
+                    <option value="TA">TA 特里斯坦達庫尼亞群島</option>
+                    <option value="TC">TC 土克斯及開科斯群島</option>
+                    <option value="TD">TD 查德</option>
+                    <option value="TF">TF 法屬南方屬地</option>
+                    <option value="TG">TG 多哥</option>
+                    <option value="TH">TH 泰國</option>
+                    <option value="TJ">TJ 塔吉克</option>
+                    <option value="TK">TK 托克勞群島</option>
+                    <option value="TL">TL 東帝汶</option>
+                    <option value="TM">TM 土庫曼</option>
+                    <option value="TN">TN 突尼西亞</option>
+                    <option value="TO">TO 東加</option>
+                    <option value="TR">TR 土耳其</option>
+                    <option value="TT">TT 千里達及托巴哥</option>
+                    <option value="TV">TV 吐瓦魯</option>
+                    <option value="TW">TW 台灣</option>
+                    <option value="TZ">TZ 坦尚尼亞</option>
+                    <option value="UA">UA 烏克蘭</option>
+                    <option value="UG">UG 烏干達</option>
+                    <option value="UM">UM 美國本土外小島嶼</option>
+                    <option value="US">US 美國</option>
+                    <option value="UY">UY 烏拉圭</option>
+                    <option value="UZ">UZ 烏茲別克</option>
+                    <option value="VA">VA 梵蒂岡</option>
+                    <option value="VC">VC 聖文森及格瑞那丁</option>
+                    <option value="VE">VE 委內瑞拉</option>
+                    <option value="VG">VG 英屬維京群島</option>
+                    <option value="VI">VI 美屬維京群島</option>
+                    <option value="VN">VN 越南</option>
+                    <option value="VU">VU 萬那杜</option>
+                    <option value="WF">WF 瓦利斯和富圖納群島</option>
+                    <option value="WS">WS 薩摩亞</option>
+                    <option value="XK">XK 科索沃</option>
+                    <option value="YE">YE 葉門</option>
+                    <option value="YT">YT 馬約特</option>
+                    <option value="ZA">ZA 南非</option>
+                    <option value="ZM">ZM 尚比亞</option>
+                    <option value="ZW">ZW 辛巴威</option>
+                  </select>
+                </div>
+                <h5>變更密碼</h6>
+                <h6 id="chandgpwd">點我變更密碼</h6>
+                <a href="" type="submit" class="update-img-btn">更新</a>
+              </form>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-5">
+              <h5>更新大頭照</h5>
+              <div
+                class="mb-3"
+                style="width: 300px; height: 300px; border: 1px #627a86 solid"
+              ></div>
+              <a href="" class="img-select">從電腦中選取檔案</a>
+              <p>最佳大小為600x600</p>
+              <a href="" class="update-img-btn">更新大頭照</a>
+            </div>
+          </div>
+        </div>
+        <!--     右邊end     -->
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.titlePart {
+  position: relative;
+  width: 1170px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.titlePart .titleD {
+  position: absolute;
+  bottom: 25px;
+  left: 200px;
+}
+.titlePart .titleD img {
+  width: 80%;
+}

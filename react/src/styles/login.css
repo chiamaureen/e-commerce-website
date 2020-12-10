@@ -1,0 +1,24 @@
+
+/* ---------------------------login--------------------------- */
+.register_info:hover {
+  color: #559534;
+  cursor: pointer;
+}
+#loginInfo {
+  color: red;
+}
+.login-btn {
+  border: 1px #99cb77 solid;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #99cb77;
+  color: #fff;
+  text-decoration: none;
+}
+.login-btn:hover {
+  border: 1px #99cb77 solid;
+  border-radius: 5px;
+  background-color: #99cb77;
+  color: #559534;
+  text-decoration: none;
+}

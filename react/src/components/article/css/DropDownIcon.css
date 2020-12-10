@@ -1,0 +1,10 @@
+.drop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #a8d182;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+}
