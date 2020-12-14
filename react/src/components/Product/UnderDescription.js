@@ -1,13 +1,13 @@
 function UnderDescription() {
   return (
     <>
-      <div class="tom-under-Description">
-        <div class="tom-small-p">
+      <div class="product-detail-under-Description">
+        <div class="product-detail-small-p">
           <img src="http://localhost:3001//img/2.jpg" alt="" />
         </div>
 
-        <div class="tom-product-Description">
-          <div class="tom-pd">
+        <div class="product-detail-product-Description">
+          <div class="product-detail-pd">
             <h3>保 濕 成 分</h3>
             <p>
               角鯊烷,蘋果酸二異硬脂基酯,聚丁烯,聚甘
@@ -19,7 +19,7 @@ function UnderDescription() {
               蠟,谷氨酸二月桂酸酯二植醇酯/辛基十 二烷醇 ,滑石粉,
             </p>
           </div>
-          <div class="tom-pd">
+          <div class="product-detail-pd">
             <h3>保 濕 成 分</h3>
             <p>
               角鯊烷,蘋果酸二異硬脂基酯,聚丁烯,聚甘

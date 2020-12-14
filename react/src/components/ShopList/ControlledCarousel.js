@@ -22,7 +22,7 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="http://localhost:3001/img/b2.jpg"
+            src="http://localhost:3001/img/p2.jpg"
             alt="Third slide"
           />
 
@@ -31,7 +31,7 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="http://localhost:3001/img/bo3.jpg"
+            src="http://localhost:3001/img/new4.jpg"
             alt="Third slide"
           />
 

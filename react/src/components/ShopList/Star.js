@@ -7,7 +7,7 @@ function Star(props) {
     return (
         <ReactStars
             count={5}
-            size={24}
+            size={18}
             activeColor="#95C375"
             value={v.star}
             edit={false}

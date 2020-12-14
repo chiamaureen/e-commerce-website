@@ -34,7 +34,7 @@ function Rows(props) {
   const link = '/ProductList/' + v.sid
   return (
     <>
-      <div class="shop_list-product col-xl-3  col-lg-4 col-md-6	">
+      <div class="shop_list-product col-xl-4  col-lg-4 col-md-6	">
         <div class="shop_list_top_pro">
           <Link to={link}>
             <img src={v.imgurl} alt="" />

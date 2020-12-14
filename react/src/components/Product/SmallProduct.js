@@ -1,13 +1,13 @@
 function SmallProduct() {
   return (
     <>
-      <div class="tom-small-product" id="small-product">
-        <div class="tom-scroll">
+      <div class="product-detail-small-product" id="small-product">
+        <div class="product-detail-scroll">
           <div>
             <img src="http://localhost:3001/img/hot00.jpg" alt="" id="img1" />
           </div>
           <div>
-            <img src="http://localhost:3001/img/hot01.jpg" alt="" id="img2" />
+            <img src="http://localhost:3001/img/hot03.jpg" alt="" id="img2" />
           </div>
           <div>
             <img src="http://localhost:3001/img/hot04.jpg" alt="" id="img3" />

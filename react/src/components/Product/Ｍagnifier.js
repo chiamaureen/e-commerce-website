@@ -4,9 +4,9 @@ const PARAMS = {
   // 放大倍数
   scale: 2,
   // 组件宽
-  width: 800,
+  width: 700,
   // 组件高
-  height: 800,
+  // height: 800,
 }
 
 // 鼠标悬停小方块 width的半径
@@ -52,8 +52,8 @@ const ClassObj = {
     position: 'absolute',
     left: `${PARAMS.width}px`,
     top: `${150}px`,
-    width: `${400}px`,
-    height: `${400}px`,
+    width: `${300}px`,
+    height: `${300}px`,
     border: '1px solid #ccc',
     overflow: 'hidden',
     zIndex: 98,
@@ -71,7 +71,7 @@ const ClassObj = {
   },
 }
 
-export default function Big(props) {
+export default function Magnifier(props) {
   // 图片信息
   const [imgUrl, setImgUrl] = useState('')
   // 移入移出开关

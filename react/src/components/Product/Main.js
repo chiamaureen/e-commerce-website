@@ -4,7 +4,7 @@ import Introduction from './Introduction'
 function Main() {
   return (
     <>
-      <main class="tom-main">
+      <main class="product-detail-main">
         <Product />
         <Introduction />
       </main>

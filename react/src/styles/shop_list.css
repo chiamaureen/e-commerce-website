@@ -120,29 +120,27 @@ header ul li:last-child {
   padding: 2px 6px;
 }
 .shop_list-price {
-  color: #2e2e2ece;
-  font-size: 16px;
+  color: #00273c;
+  font-size: 20px;
 }
 .shop_list-price-sell {
-  color: rgba(233, 38, 38, 0.781);
-  font-size: 16px;
+  color: red;
+  font-size: 20px;
 }
 
 .shop_list-nav {
-  font-size: 16px;
+  font-size: 18px;
   width: 150px;
   float: left;
   top: 700px;
-  border-right: 1px solid #0d5c3f7e;
+  border-right: 3px solid #a8de82;
   cursor: pointer;
-  margin: 1rem;
 }
 
 .shop_list-nav li {
   list-style: none;
-  padding: 30px 10px;
-  text-align: right;
-  color: #0d5c3f;
+  padding: 30px;
+  color: #dcd7cc;
   font-weight: bold;
 }
 .shop_list-product {
