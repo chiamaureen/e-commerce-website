@@ -50,7 +50,6 @@ function Product() {
       {product.map((value, index) => {
         return (
           <Col className="homepageCard" xs={6} md={3}>
-            <Card style={{ border: 'none' }} className="homepage">
               <img variant="top" src={value.picture} alt="" />
               <div>
                 <h5>{value.name}</h5>
@@ -58,7 +57,7 @@ function Product() {
                   NTD<span> {value.price}</span>
                 </p>
 
-                <Button
+                {/* <Button
                   variant="success"
                   style={{
                     color: '#ffffff',
@@ -68,9 +67,8 @@ function Product() {
                   }}
                 >
                   了解更多
-                </Button>
+                </Button> */}
               </div>
-            </Card>
           </Col>
         )
       })}

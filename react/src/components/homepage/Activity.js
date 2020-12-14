@@ -19,7 +19,7 @@ function Activity() {
           <div className="home-photo">
             <img src="/images/course-3.jpg" alt="" />
           </div>
-          <Col xs={6} md={3} className="home-card">
+          <Col className="home-card">
             <div className="home-card-info">
               <h6>【講座】</h6>
               <h3>超親民環保攻略</h3>
@@ -35,7 +35,6 @@ function Activity() {
             <Button
               variant="outline-success"
               size="sm"
-              style={{ marginLeft: '70%' }}
             >
               了解更多
             </Button>
