@@ -1,11 +1,14 @@
 .navbar {
   background-color: #fff;
   height: 100px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: relative;
+  position: fixed !important;
+  top: 0;
+  z-index: 999;
 }
 
 .navberLogo {

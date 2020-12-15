@@ -86,9 +86,9 @@ function Introduction() {
             </div>
             <h2 class="product-detail-ar-title">相關文章</h2>
             <ul>
-              <ol><Link to="/CourseDetail/1"><div class="product-detail-title-ol">1.世外桃源的香草革命，台東尚德村的「小村遠遠」讓百人小村擁有更多未來</div> </Link></ol>
-              <ol ><Link to ="/CourseDetail/2"><div class="product-detail-title-ol">2.家長就是學校獨特資源！屏東四林國小校田凝聚全村之力陪孩子成長</div> </Link></ol>
-              <ol ><Link to ="/CourseDetail/3"><div class="product-detail-title-ol">3.熱氣球之外的台東 卑南藥草植物園與食療火鍋、鹿野紅烏龍與小農市集</div> </Link></ol>
+              <li class="product-recommend-article"><Link to="/CourseDetail/1" className="link">1.世外桃源的香草革命，台東尚德村的「小村遠遠」讓百人小村擁有更多未來 </Link></li>
+              <li class="product-recommend-article"><Link to ="/CourseDetail/2"className="link">2.家長就是學校獨特資源！屏東四林國小校田凝聚全村之力陪孩子成長</Link></li>
+              <li class="product-recommend-article" ><Link to ="/CourseDetail/3"className="link">3.熱氣球之外的台東 卑南藥草植物園與食療火鍋、鹿野紅烏龍與小農市集</Link></li>
             </ul>
           </div>
       

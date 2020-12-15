@@ -18,8 +18,7 @@
   letter-spacing: 2px;
   font-weight: lighter;
   line-height: 1.5;
-
-  padding: 15px 0;
+  /* padding: 15px 0; */
   width: 80%;
 }
 .product-detail-th-ic {
@@ -33,7 +32,7 @@
   position: relative;
 }
 .product-detail-product-title {
-  color: #707070;
+  color: #525050;
   margin-top: 3px;
   font-size: 20px;
 }
@@ -64,7 +63,7 @@
 .product-detail-count {
   width: 100%;
   font-size: 15px;
-  padding-top: 15px;
+  margin: 15px;
   display: flex;
   vertical-align: bottom;
 }
@@ -73,48 +72,54 @@
   border: 1px solid #ddead7;
   margin-right: 15px;
   height: 30px;
-  line-height: 30px;
-  margin-top: 15px;
-  font-size: 18px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .product-detail-sel img {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   align-self: center;
   cursor: pointer;
 }
 .amo {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .product-detail-price {
   font-size: 20px;
-  margin-top: 20px;
-  font-size: 25px;
-  /* margin-left: 30px; */
+  margin: 20px;
+  color: #525050;
 }
 
 .product-detail-ar-title {
   margin-top: 25px;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 16px;
+  color: #525050;
 }
-.tom ol {
-  font-size: 15px;
-  padding-bottom: 10px;
+li {
+  list-style: none;
+}
+.product-recommend-article a {
+  font-size: 16px;
+  padding: 20px 0;
+  text-decoration: none;
+  color: #525050;
+}
+.link:hover {
+  color: #95c375;
+  text-decoration: none;
 }
 .product-detail-add-shop {
   display: flex;
   width: 150px;
   height: 30px;
-  line-height: 30px;
-  margin-top: 14px;
-  text-align: center;
-  display: inline-block;
-  font-size: 20px;
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  /* cursor: pointer; */
   background-color: #ddead7;
 }
 
@@ -133,10 +138,9 @@
 .product-detail-Introduction {
   width: 50%;
   padding: 3rem;
-  position: relative;
-  /* margin-top: 70px; */
   position: fixed;
   right: 0;
+  top: 100px;
 }
 .product-detail-Introduction p {
   font-size: 16px;
