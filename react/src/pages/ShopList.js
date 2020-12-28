@@ -26,7 +26,7 @@ function ShopList(props) {
       
     })
     const data = await res.json()
-    console.log(Option)
+    // console.log(Option)
     setMydata(data)
   }
   useEffect(() => {

@@ -14,12 +14,13 @@ function ProductRow(props) {
         return <Rows v={v} i={i} isAuth={isAuth} />
       }
     })
-  console.log(display)
+  // console.log(display)
+  const noData = <div className="noData" style={{height:'200px',margin:'5rem'}}>查 無 資 料 </div>
 
   return (
     <>
-      <div class="container shop_list-product-first-row ">
-        <div class="row">{display.length !== 0 ? display : '查無資料'}</div>
+      <div class="container shop_list-product-first-row">
+        <div class="row">{display.length !== 0 ? display : noData}</div>
       </div>
     </>
   )

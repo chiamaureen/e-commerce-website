@@ -10,14 +10,14 @@ function ControlledCarousel() {
 
   return (
     <div className="shop_list_top">
-      <Carousel>
+      <Carousel style={{marginTop:'100px'}}>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src="http://localhost:3001/img/ba.jpg"
             alt="First slide"
           />
-          <Carousel.Caption></Carousel.Caption>
+          {/* <Carousel.Caption></Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -26,7 +26,7 @@ function ControlledCarousel() {
             alt="Third slide"
           />
 
-          <Carousel.Caption></Carousel.Caption>
+          {/* <Carousel.Caption></Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -35,7 +35,7 @@ function ControlledCarousel() {
             alt="Third slide"
           />
 
-          <Carousel.Caption></Carousel.Caption>
+          {/* <Carousel.Caption></Carousel.Caption> */}
         </Carousel.Item>
       </Carousel>
     </div>

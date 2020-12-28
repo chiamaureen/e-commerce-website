@@ -129,6 +129,12 @@ function Rows(props) {
           </div>
         </div>
         <div class="shop_list-cart">
+ 
+          {v.Specialoffer < v.price ? (
+            <h2 class="shop_list-price-sell">特NT.{v.Specialoffer}</h2>
+          ) : (
+            <h2 class="shop_list-price">NT.{v.price}</h2>
+          )}
           <button
             onClick={() => {
               const data = {
@@ -150,11 +156,6 @@ function Rows(props) {
           >
             加入購物車
           </button>
-          {v.Specialoffer < v.price ? (
-            <h2 class="shop_list-price-sell">特NT.{v.Specialoffer}</h2>
-          ) : (
-            <h2 class="shop_list-price">NT.{v.price}</h2>
-          )}
         </div>
       </div>
     </>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Rate } from 'antd'
 function Introduction() {
   const [amount, setAmount] = useState(1)
+  const [fix,setFix]=useState(false)
   const data = {
     sid: 25,
     name: '奇蹟辣木油',
@@ -10,9 +11,21 @@ function Introduction() {
     picture: 'http://localhost:3001/img/hot00.jpg',
     amount: amount,
   }
+const fixIntroduction = ()=>{
+  // console.log(window.scrollY)
+  if (window.scrollY<1900){
+    setFix(true)
+  }else{
+    setFix(false)
+  }
+}
+window.addEventListener('scroll',fixIntroduction)
+ 
+  
   return (
     <>
-      <div class="product-detail-Introduction" id="Introduction">
+      <div class={fix ? "product-detail-Introduction   fix":"product-detail-Introduction"}
+      id="Introduction">
           <div class="product-detail-title-top" id="title-top">
             <h2 class="product-detail-product-title">
               {' '}
@@ -85,7 +98,7 @@ function Introduction() {
               </div>
             </div>
             <h2 class="product-detail-ar-title">相關文章</h2>
-            <ul>
+            <ul class="product-recommend-article-area">
               <li class="product-recommend-article"><Link to="/CourseDetail/1" className="link">1.世外桃源的香草革命，台東尚德村的「小村遠遠」讓百人小村擁有更多未來 </Link></li>
               <li class="product-recommend-article"><Link to ="/CourseDetail/2"className="link">2.家長就是學校獨特資源！屏東四林國小校田凝聚全村之力陪孩子成長</Link></li>
               <li class="product-recommend-article" ><Link to ="/CourseDetail/3"className="link">3.熱氣球之外的台東 卑南藥草植物園與食療火鍋、鹿野紅烏龍與小農市集</Link></li>
