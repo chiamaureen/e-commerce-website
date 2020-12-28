@@ -188,6 +188,7 @@ function Comment(props) {
 
     console.log('伺服器回傳的json資料', data)
     getCommentFromServer()
+    getRating()
     //警示
     setTimeout(() => {
       setLoading(false)
@@ -218,7 +219,7 @@ function Comment(props) {
     console.log(data)
     alert('已刪除')
     getCommentFromServer()
-
+    getRating()
     // 設定資料
     // if (!displayComment.sid) {
     //   const newComment = displayComment.filter((item, index) => {
