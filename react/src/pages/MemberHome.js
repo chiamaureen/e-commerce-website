@@ -11,7 +11,7 @@ function MemberHome(props) {
   return (
     <>
       <div className="mt-5">
-        <h1>Hello</h1>
+        {/* <h1>Hello</h1> */}
         {/* <Link to="/memberroot">Link component to memberroot</Link>
       <Login
         loginModalShow={loginModalShow}

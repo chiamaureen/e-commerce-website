@@ -10,32 +10,32 @@ function CartContent(props) {
   const [total, setTotal] = useState(0)
 
   //
-  function setCartFromLocalStorage() {
-    let cart = [
-      {
-        sid: 1,
-        name: '順其自然卸妝乳',
-        price: 350,
-        picture: '/images/facial1.jpg',
-        amount: 2,
-      },
-      {
-        sid: 5,
-        name: '煥然一新晚霜',
-        price: 500,
-        picture: '/images/facial5.jpg',
-        amount: 3,
-      },
-      {
-        sid: 3,
-        name: '無負擔精華油',
-        price: 500,
-        picture: '/images/facial3.jpg',
-        amount: 1,
-      },
-    ]
-    localStorage.setItem('cart', JSON.stringify(cart))
-  }
+  // function setCartFromLocalStorage() {
+  //   let cart = [
+  //     {
+  //       sid: 1,
+  //       name: '順其自然卸妝乳',
+  //       price: 350,
+  //       picture: '/images/facial1.jpg',
+  //       amount: 2,
+  //     },
+  //     {
+  //       sid: 5,
+  //       name: '煥然一新晚霜',
+  //       price: 500,
+  //       picture: '/images/facial5.jpg',
+  //       amount: 3,
+  //     },
+  //     {
+  //       sid: 3,
+  //       name: '無負擔精華油',
+  //       price: 500,
+  //       picture: '/images/facial3.jpg',
+  //       amount: 1,
+  //     },
+  //   ]
+  //   localStorage.setItem('cart', JSON.stringify(cart))
+  // }
 
   //
   // useEffect(() => {
@@ -45,7 +45,7 @@ function CartContent(props) {
   function getCartFromLocalStorage() {
     const newCart = localStorage.getItem('cart') || '[]'
 
-    console.log(JSON.parse(newCart))
+    // console.log(JSON.parse(newCart))
 
     setMycart(JSON.parse(newCart))
   }
@@ -80,19 +80,19 @@ function CartContent(props) {
       }
     }
 
-    console.log(newMycartDisplay)
+    // console.log(newMycartDisplay)
     setMycartDisplay(newMycartDisplay)
   }, [mycart])
 
   // 更新購物車中的商品數量
   const updateCartToLocalStorage = (item, isAdded = true) => {
-    console.log(item, isAdded)
+    // console.log(item, isAdded)
     const currentCart = JSON.parse(localStorage.getItem('cart')) || []
 
     // find if the product in the localstorage with its id
     const index = currentCart.findIndex((v) => v.sid === item.sid)
 
-    console.log('index', index)
+    // console.log('index', index)
     // found: index! == -1
     if (index > -1) {
       isAdded ? currentCart[index].amount++ : currentCart[index].amount--
@@ -106,7 +106,7 @@ function CartContent(props) {
 
   //刪除
   const removeCartToLocalStorage = (item) => {
-    console.log(item)
+    // console.log(item)
     const currentCart = JSON.parse(localStorage.getItem('cart')) || []
 
     // find if the product in the localstorage with its id
@@ -164,18 +164,17 @@ function CartContent(props) {
 
   const display = (
     <>
-      <div className="row col-12 px-0">
+      <div className="shop-details">
         <h3 className="cart-title">購物車</h3>
         <div className="cart cart-item">
           <table>
             <thead>
               <tr>
-                <th>商品名稱</th>
-                <th>優惠</th>
-                <th>單價</th>
-                <th>數量</th>
-                <th>小計</th>
-                <th></th>
+                <th style={{fontWeight:"400"}}>商品名稱</th>
+                <th style={{fontWeight:"400"}}>優惠</th>
+                <th style={{fontWeight:"400"}}>單價</th>
+                <th style={{fontWeight:"400"}}>數量</th>
+                <th style={{fontWeight:"400"}}>小計</th>
               </tr>
             </thead>
             <tbody>
@@ -235,9 +234,9 @@ function CartContent(props) {
                   </tr>
                 )
               })}
-              <tr className="table-text">
-                <td>
-                  <label for="discount-code">優惠代碼：</label>
+              <tr className="table-text" style={{fontWeight:'300'}}>
+                <td style={{border:'none',fontWeight:'300'}}>
+                  <label for="discount-code" style={{marginBottom:'1.5rem'}}>優惠代碼：</label>
                   <input
                     id="discount-code"
                     name="discount-code"
@@ -257,20 +256,20 @@ function CartContent(props) {
           </table>
         </div>
       </div>
-      <div className="row col-12 px-0">
+      <div className="shop-payment-details">
         <div className="col-8">
           <div className="cart cart-delivery">
-            <table>
+            <table style={{width:'100%'}}>
               <thead>
                 <tr>
                   <th>
-                    <h3 className="table-title">選擇送貨及付款方式</h3>
+                    <h3 className="table-title"  style={{marginBottom:0}}>選擇送貨及付款方式</h3>
                   </th>
                 </tr>
               </thead>
             </table>
             <div className="inner">
-              <h5>配送方式</h5>
+              <h5 style={{fontSize:'18px',fontWeight:'300'}}>配送方式</h5>
               <div className="radio-wrap d-flex align-items-center">
                 <input type="radio" id="home" name="delivery" value="e" />
                 <label for="home">宅配</label>
@@ -289,7 +288,7 @@ function CartContent(props) {
                   className="btn cart-btn store-location"
                 />
               </div>
-              <h5>付款方式</h5>
+              <h5 style={{fontSize:'18px',fontWeight:'300'}}>付款方式</h5>
               <div className="radio-wrap d-flex align-items-center">
                 <input type="radio" id="credit" name="payment" value="10" />
                 <label for="credit">信用卡</label>
@@ -307,7 +306,7 @@ function CartContent(props) {
               <thead>
                 <tr>
                   <th>
-                    <h3 className="table-title">訂單資訊</h3>
+                    <h3 className="table-title" style={{marginBottom:0}}>訂單資訊</h3>
                   </th>
                 </tr>
               </thead>

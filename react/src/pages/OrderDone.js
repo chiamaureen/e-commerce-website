@@ -12,7 +12,7 @@ function OrderDone(props) {
   function getTotalFromLocalStorage() {
     const newTotal = localStorage.getItem('mytotal') || '[]'
 
-    console.log(JSON.parse(newTotal))
+    // console.log(JSON.parse(newTotal))
 
     setMyTotal(JSON.parse(newTotal))
   }
@@ -69,6 +69,7 @@ function OrderDone(props) {
   // useEffect(() => {
   //   addOrder()
   // })
+  const removeCart = ()=>localStorage.removeItem('cart')
 
   return (
     <>
@@ -80,10 +81,7 @@ function OrderDone(props) {
         <div className="row col-12 mb-5 justify-content-center">
           <Link to="/ShopList">
             <BackToShopBtn
-              onClick={() => {
-                localStorage.removeItem('cart')
-              }}
-            />
+              onClick={removeCart()}/>
           </Link>
         </div>
       </div>

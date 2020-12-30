@@ -35,7 +35,7 @@ function CartDropdown(props) {
         <div className="cart-list w-100 mb-3">
           <div className="total-wrap">合計：NT$ {myTotal.totalPrice}</div>
           <div className="cart-dropdown d-flex justify-content-center align-items-center">
-            購物車：{myTotal.totalAmouunt}件 &ensp;
+            購物車：{myTotal.totalAmount}件 &ensp;
             <Link
               onClick={() => {
                 spinTheArrow()

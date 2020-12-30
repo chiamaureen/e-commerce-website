@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import bootstrap from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-import Navbar from '../components/Navebar'
-import Footer from '../components/Footer'
 import OrderListCard from '../components/cart/OrderListCard'
 import PaymentInfoBtn from '../components/cart/PaymentInfoBtn'
 import CheckoutBtn from '../components/cart/CheckoutBtn'
@@ -225,11 +223,7 @@ function OrderCheck(props) {
             <PaymentInfoBtn />
           </Link>
           <Link to="/order-done">
-            <CheckoutBtn
-            // onClick={() => {
-            //   addOrder()
-            // }}
-            />
+            <CheckoutBtn/>
           </Link>
         </div>
       </div>

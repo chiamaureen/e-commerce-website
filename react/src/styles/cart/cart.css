@@ -2,10 +2,6 @@
 /* html {
   font-size: 14pt ;
 } */
-body {
-  margin: 0;
-  padding: 0;
-}
 /* header {
   position: relative;
   display: flex;
@@ -17,33 +13,42 @@ header .navbar {
   height: 100px;
   background-color: #ccc;
 } */
-main {
+/* main {
   margin: 100px;
+} */
+.shop-details {
+  width: 100%;
+  font-size: 16px;
+  margin: 0 auto;
 }
 input.cart-input {
   border: 2px solid #a8d182;
 }
-.container {
+/* .container {
   padding: 0;
-}
+} */
 .row {
-  max-width: 1170pxt;
+  margin: 0;
 }
 .step-wrap {
-  width: 540px;
-  height: 81px;
-  margin: 50px auto;
+  width: 100%;
+  /* height: 81px; */
+  margin: 150px auto 1rem;
+  display: flex;
+  justify-content: center;
 }
 .step-wrap img {
-  width: 100%;
-  height: 100%;
+  width: 400px;
 }
 .cart-title {
-  padding-left: 30px;
+  padding: 1rem;
+  font-size: 22px;
 }
 .cart {
   border: 2px solid #ddead7;
   margin-bottom: 50px;
+  font-size: 16px;
+  border-bottom: 3px solid #71a757;
 }
 .cart-item {
   width: 100%;
@@ -51,19 +56,34 @@ input.cart-input {
 .cart table {
   width: 100%;
   text-align: start;
+  word-wrap: break-word;
+  font-weight: 200;
+}
+
+thead {
+  border-bottom: 3px solid #71a757;
 }
 .cart table tr {
-  border-bottom: 5px solid #71a757;
+  width: 100%;
+  /* border-top: 3px solid #71a757; */
 }
 .cart-item table th {
-  padding: 15px 30px;
+  padding: 5px 22px;
 }
 .cart table td {
-  padding: 15px 30px;
+  padding: 15px 20px;
+  border-bottom: 3px solid #71a757;
+  font-weight: 500;
+  align-items: center;
 }
 .cart-item table img {
   width: 100px;
   height: 100px;
+}
+.shop-payment-details {
+  display: flex;
+  margin: 0;
+  width: 100%;
 }
 .amount {
   white-space: nowrap;
@@ -87,6 +107,7 @@ input.cart-input {
   border: 0 solid transparent;
   font-size: 12pt;
   white-space: nowrap;
+  /* border-bottom: 3px solid #71a757; */
 }
 .discount-box {
   display: inline-block;
@@ -110,8 +131,9 @@ input.cart-input {
   padding-right: 0;
 }
 .table-title {
-  margin-top: 5px;
-  padding-left: 30px;
+  /* margin-top: 5px; */
+  padding: 0.5rem;
+  font-size: 22px;
 }
 .inner {
   width: 100%;
@@ -123,7 +145,7 @@ input.cart-input {
 .radio-wrap {
   width: 100%;
   height: 40px;
-  margin: 10px 0;
+  margin: 1rem 0;
   border: 2px solid #e7e4dc;
   font-weight: 500;
 }

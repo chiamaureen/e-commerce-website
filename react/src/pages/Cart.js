@@ -13,16 +13,17 @@ function Cart(props) {
   return (
     <>
       <div className="container">
-        <div classNameName="row justify-content-center">
+        <div className="row">
           <div className="step-wrap">
             <img src="./images/step1.png" alt="" />
           </div>
-        </div>
-        <CartContent />
-        <div className="row col-12 pr-0 mb-5">
+        
+          <CartContent />
+          <div className="col-12 pr-0 mb-5">
           <Link to="/ShopList">
             <BackToShopBtn />
           </Link>
+          </div>
         </div>
       </div>
     </>

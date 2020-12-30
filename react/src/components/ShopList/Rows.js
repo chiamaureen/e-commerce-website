@@ -148,7 +148,7 @@ function Rows(props) {
                 localStorage.setItem('cart', JSON.stringify([data]))
               } else {
                 const newCart = JSON.parse(localStorage.getItem('cart'))
-                console.log(newCart)
+                // console.log(newCart)
                 const addItem = [data, ...newCart]
                 localStorage.setItem('cart', JSON.stringify(addItem))
               }
