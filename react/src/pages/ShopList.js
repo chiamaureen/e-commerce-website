@@ -8,13 +8,13 @@ import { withRouter } from 'react-router'
 import '../shop_list.css'
 
 function ShopList(props) {
-  console.log(props)
-  const {isAuth}=props
+  // console.log(props)
+  const {isAuth,cartItems,setCartItems}=props
   const [inputSearch, setInputSearch] = useState('')
   const [category, setCategory] = useState(0)
   const [mydata, setMydata] = useState([])
   const [Option, setOption] = useState(0)
-  console.log(Option)
+  // console.log(Option)
   const getData = async () => {
     const res = await fetch('http://localhost:3000/product/get-db', {
       method: 'POST',
@@ -46,7 +46,7 @@ function ShopList(props) {
       />
       <Nav setCategory={setCategory} />
 
-      <ProductRow data={mydata} category={category} inputSearch={inputSearch} isAuth={isAuth}/>
+      <ProductRow data={mydata} category={category} inputSearch={inputSearch} isAuth={isAuth} cartItems={cartItems} setCartItems={setCartItems}/>
     </>
   )
 }

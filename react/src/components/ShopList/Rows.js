@@ -3,7 +3,7 @@ import Star from './Star'
 import { Link, withRouter } from 'react-router-dom'
 import ControlledCarousel from './ControlledCarousel'
 function Rows(props) {
-  const { v, i, isAuth } = props
+  const { v, i, isAuth,cartItems,setCartItems } = props
   const [fav, setFav] = useState(false)
   const data = {
     sid: v.sid,
@@ -11,7 +11,7 @@ function Rows(props) {
     price: v.price,
     picture: v.imgurl,
   }
-  console.log(fav)
+  // console.log(fav)
   const favData = { sid: v.sid, true: true }
   const favHandle = (sid) => {
     let getFav = JSON.parse(localStorage.getItem('fav'))
@@ -31,6 +31,17 @@ function Rows(props) {
   useEffect(() => {
     favHandle(v.sid)
   }, [])
+  
+
+  function getCartItems(){
+    const countCartItems=JSON.parse(localStorage.getItem('mytotal'))
+    const currentCartItems = countCartItems[0]
+    setCartItems(currentCartItems)
+  } 
+  useEffect(()=>{
+    getCartItems()
+  },[])
+
   const link = '/ProductList/' + v.sid
   return (
     <>
@@ -137,6 +148,7 @@ function Rows(props) {
           )}
           <button
             onClick={() => {
+              // getCartItems()
               const data = {
                 sid: v.sid,
                 name: v.name,
@@ -146,11 +158,13 @@ function Rows(props) {
               }
               if (localStorage.cart == null) {
                 localStorage.setItem('cart', JSON.stringify([data]))
+                localStorage.setItem('mytotal', JSON.stringify([data.amount]))
               } else {
                 const newCart = JSON.parse(localStorage.getItem('cart'))
                 // console.log(newCart)
                 const addItem = [data, ...newCart]
                 localStorage.setItem('cart', JSON.stringify(addItem))
+                localStorage.setItem('mytotal', JSON.stringify([data.amount]))
               }
             }}
           >

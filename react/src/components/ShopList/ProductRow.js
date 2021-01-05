@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react'
 import Rows from './Rows'
 
 function ProductRow(props) {
-  const { data, category, inputSearch, isAuth } = props
+  const { data, category, inputSearch, isAuth,cartItems,setCartItems } = props
 
   let display = ''
   display =
     data &&
     data.map((v, i) => {
       if (v.category === category && v.category !== 0) {
-        return <Rows v={v} i={i} isAuth={isAuth} />
+        return <Rows v={v} i={i} isAuth={isAuth} cartItems={cartItems} setCartItems={setCartItems}/>
       } else if (category === 0) {
-        return <Rows v={v} i={i} isAuth={isAuth} />
+        return <Rows v={v} i={i} isAuth={isAuth} cartItems={cartItems} setCartItems={setCartItems}/>
       }
     })
   // console.log(display)

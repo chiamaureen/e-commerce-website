@@ -10,6 +10,9 @@ import '../../node_modules/bootstrap/scss/bootstrap.scss'
 import '../styles/cart/cart.css'
 
 function Cart(props) {
+
+  const { isAuth,cartItems,setCartItems} = props
+
   return (
     <>
       <div className="container">
@@ -18,7 +21,7 @@ function Cart(props) {
             <img src="./images/step1.png" alt="" />
           </div>
         
-          <CartContent />
+          <CartContent isAuth={isAuth}  cartItems={cartItems} setCartItems={setCartItems}/>
           <div className="col-12 pr-0 mb-5">
           <Link to="/ShopList">
             <BackToShopBtn />

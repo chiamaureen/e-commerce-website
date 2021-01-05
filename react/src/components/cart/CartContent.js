@@ -4,43 +4,11 @@ import { Link } from 'react-router-dom'
 import PaymentInfoBtn from './PaymentInfoBtn'
 
 function CartContent(props) {
+  const { isAuth,cartItems,setCartItems} = props
   const [mycart, setMycart] = useState([])
   const [isEmpty, setIsEmpty] = useState(true)
   const [mycartDisplay, setMycartDisplay] = useState([])
   const [total, setTotal] = useState(0)
-
-  //
-  // function setCartFromLocalStorage() {
-  //   let cart = [
-  //     {
-  //       sid: 1,
-  //       name: '順其自然卸妝乳',
-  //       price: 350,
-  //       picture: '/images/facial1.jpg',
-  //       amount: 2,
-  //     },
-  //     {
-  //       sid: 5,
-  //       name: '煥然一新晚霜',
-  //       price: 500,
-  //       picture: '/images/facial5.jpg',
-  //       amount: 3,
-  //     },
-  //     {
-  //       sid: 3,
-  //       name: '無負擔精華油',
-  //       price: 500,
-  //       picture: '/images/facial3.jpg',
-  //       amount: 1,
-  //     },
-  //   ]
-  //   localStorage.setItem('cart', JSON.stringify(cart))
-  // }
-
-  //
-  // useEffect(() => {
-  //   setCartFromLocalStorage()
-  // })
 
   function getCartFromLocalStorage() {
     const newCart = localStorage.getItem('cart') || '[]'

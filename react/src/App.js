@@ -38,7 +38,7 @@ function App() {
   //設定登入登出的狀態
   const [isAuth, setisAuth] = useState()
 
-  // const [cartItems, setCartItems] = useState(0)
+  const [cartItems, setCartItems] = useState(0)
   // const [ok, setok] = useState(false)
 
   useEffect(() => {
@@ -50,6 +50,16 @@ function App() {
   }
   }, [])
 
+  function getCartItems(){
+    // const countCartItems=JSON.parse(localStorage.getItem('mytotal'))
+    // const currentCartItems = countCartItems[0]
+    const countCartItems=localStorage.getItem('cart')
+    const currentCartItems = countCartItems.length
+    setCartItems(currentCartItems)
+  } 
+  useEffect(()=>{
+    getCartItems()
+  },[])
   // useEffect(() => {
   //   const cartItemsLS = JSON.parse(localStorage.getItem('cart'))
   //   if (cartItemsLS === null) {
@@ -69,7 +79,7 @@ function App() {
             <SellerBack />
           </Route>
         </Switch>
-        <Navbar isAuth={isAuth} setisAuth={setisAuth} />
+        <Navbar isAuth={isAuth} setisAuth={setisAuth} cartItems={cartItems} setCartItems={setCartItems}/>
         <ScrollToTop>
           <Switch>
             <Route exact path="/">
@@ -82,7 +92,7 @@ function App() {
               <ProductList isAuth={isAuth} />
             </Route>
             <Route path="/ShopList/:category?/:sid?/">
-              <ShopList isAuth={isAuth} />
+              <ShopList isAuth={isAuth} cartItems={cartItems} setCartItems={setCartItems}/>
             </Route>
             {/* <Route path="/ProductData/:sid?">
               <ProductData />
@@ -108,7 +118,7 @@ function App() {
             <Route path="/CourseSubmit/form">
               <CourseSubmit />
             </Route>
-            <Route path="/cart">
+            <Route path="/cart"  isAuth={isAuth}  cartItems={cartItems} setCartItems={setCartItems}>
               <Cart />
             </Route>
             <Route path="/payment-info">
