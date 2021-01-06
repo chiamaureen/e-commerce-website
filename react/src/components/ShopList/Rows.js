@@ -34,13 +34,15 @@ function Rows(props) {
   
 
   function getCartItems(){
-    const countCartItems=JSON.parse(localStorage.getItem('mytotal'))
-    const currentCartItems = countCartItems[0]
+    // const countCartItems=JSON.parse(localStorage.getItem('mytotal'))
+    // const currentCartItems = countCartItems[0]
+    const countCartItems=JSON.parse(localStorage.getItem('cart'))
+    const currentCartItems = countCartItems.length
     setCartItems(currentCartItems)
   } 
   useEffect(()=>{
     getCartItems()
-  },[])
+  },[cartItems])
 
   const link = '/ProductList/' + v.sid
   return (

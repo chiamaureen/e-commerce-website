@@ -22,7 +22,7 @@ router.use("/get-db", jsonParser, async (req, res) => {
 
   const [results] = await db.query(sql)
   res.json(results)
-  console.log(req.body)
+  // console.log(req.body)
 })
 
 module.exports = router

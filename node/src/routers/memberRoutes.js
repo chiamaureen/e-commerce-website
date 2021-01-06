@@ -10,7 +10,7 @@ const fs = require("fs"); //讀檔案寫檔案
 router.post("/", (req, res) => {
   db.query("SELECT * FROM `members` WHERE 1")
     .then(([results]) => {
-      console.log(results);
+      // console.log(results);
       res.json(results);
     });
 });
@@ -36,7 +36,7 @@ router.post("/register", async (req, res) => {
     req.body.addressCode,
     req.body.addressString
   ]);
-  console.log(result);
+  // console.log(result);
   const insertId = result.insertId
   return res.json({ id: insertId })
 })
@@ -46,7 +46,7 @@ router.post("/getMemberData", async (req, res) => {
   const sql = "SELECT * FROM `members` WHERE id=?"
   await db.query(sql, [req.body.id])
     .then(([results]) => {
-      console.log(results);
+      // console.log(results);
       return res.json(results);
     });
 });
@@ -55,7 +55,7 @@ router.post("/getMemberDataPostCode", async (req, res) => {
   const sql = "SELECT * FROM `members` WHERE id=?"
   await db.query(sql, [req.body.id])
     .then(([results]) => {
-      console.log(results);
+      // console.log(results);
       return res.json(results);
     });
 });
@@ -73,7 +73,7 @@ router.post("/editMemberData", async (req, res) => {
     req.body.addressString,
     req.body.id,
   ]);
-  console.log(result);
+  // console.log(result);
   if (result.changedRows === 1) {
     return res.json({ message: "修改成功" });
   }
@@ -91,7 +91,7 @@ router.post("/editMemberPwd", async (req, res) => {
 
 //會員上傳或更新大頭照
 router.post("/editMemberAvatar", upload.single('avatar'), (req, res) => {
-  console.log(req.file);
+  // console.log(req.file);
   if (req.file && req.file.originalname) {
     switch (req.file.mimetype) {
       case "image/png":
@@ -115,7 +115,7 @@ router.post("/editMemberAvatar", upload.single('avatar'), (req, res) => {
 
 router.post("/memberImg", (req, res) => {
   //把上傳的圖片更新到資料表
-  console.log(req.body);
+  // console.log(req.body);
   const sql = "UPDATE `members` SET `avatar`=? WHERE id=?";
   // if (req.body.id) {
   const [result] = db.query(sql, [req.body.avatarName, req.body.id])
@@ -135,7 +135,7 @@ router.post("/coupon", async (req, res) => {
 router.post("/orderinfo", async (req, res) => {
   const sql = "SELECT * FROM `Order_Info` WHERE `Member_id`=? "
   const [result] = await db.query(sql, [req.body.Member_id]);
-  console.log(result)
+  // console.log(result)
   return res.json(result);
 })
 
@@ -143,7 +143,7 @@ router.post("/orderinfo", async (req, res) => {
 router.post("/orderdetail", async (req, res) => {
   const sql = "SELECT * FROM `Order_Detail` WHERE `OrderDetail_code`=? "
   const [result] = await db.query(sql, [req.body.Order_code]);
-  console.log(result)
+  // console.log(result)
   return res.json(result);
 })
 

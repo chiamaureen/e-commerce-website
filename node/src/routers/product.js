@@ -37,7 +37,7 @@ router.post("/get-db", jsonParser, async (req, res) => {
   const [results] = await db.query(sql);
 
   res.json(results);
-  console.log(results);
+  // console.log(results);
 });
 router.post("/upload-photo", upload.single("imgurl"), (req, res) => {
   res.json(req.file);
@@ -58,21 +58,21 @@ router.post("/edit/:sid", jsonParser, async (req, res) => {
   const data = { ...req.body };
   const sql = "UPDATE `product` SET ? WHERE sid=?";
   res.json("ok");
-  console.log(req.params.sid);
+  // console.log(req.params.sid);
   await db.query(sql, [data, parseInt(req.params.sid)]);
-  console.log(data);
+  // console.log(data);
 });
 router.post("/addProduct", jsonParser, async (req, res) => {
   const data = { ...req.body };
   let sql = "INSERT INTO `product` set ?";
   await db.query(sql, [data]);
 
-  console.log(req.body);
+  // console.log(req.body);
   res.json("ok");
 });
 router.delete("/del/:sid", async (req, res) => {
   const sql = "DELETE FROM `product` WHERE sid=?";
-  console.log(req.params.sid);
+  // console.log(req.params.sid);
   const [results] = await db.query(sql, [req.params.sid]);
   res.json([results]);
 });

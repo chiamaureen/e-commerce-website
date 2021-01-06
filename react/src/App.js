@@ -39,7 +39,7 @@ function App() {
   const [isAuth, setisAuth] = useState()
 
   const [cartItems, setCartItems] = useState(0)
-  // const [ok, setok] = useState(false)
+ 
 
   useEffect(() => {
     const memberAuth = localStorage.getItem('memberLogInInfo')
@@ -51,25 +51,16 @@ function App() {
   }, [])
 
   function getCartItems(){
-    // const countCartItems=JSON.parse(localStorage.getItem('mytotal'))
-    // const currentCartItems = countCartItems[0]
-    const countCartItems=localStorage.getItem('cart')
-    const currentCartItems = countCartItems.length
+    const countCartItems=JSON.parse(localStorage.getItem('mytotal'))
+    const currentCartItems = countCartItems[0]
+    // const countCartItems=localStorage.getItem('cart')
+    // const currentCartItems = countCartItems.length
     setCartItems(currentCartItems)
   } 
   useEffect(()=>{
     getCartItems()
   },[])
-  // useEffect(() => {
-  //   const cartItemsLS = JSON.parse(localStorage.getItem('cart'))
-  //   if (cartItemsLS === null) {
-  //     setCartItems(0)
-  //     setok(!ok)
-  //   } else {
-  //     setCartItems(cartItemsLS.length)
-  //     setok(!ok)
-  //   }
-  // }, [ok])
+
 
   return (
     <Router>

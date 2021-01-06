@@ -32,7 +32,7 @@ async function getData (req) {
         }
         // LIMIT ${(output.page-1)*output.perPage}, ${output.perPage}
         let sql = `SELECT * FROM rating ORDER BY sid DESC `
-        console.log(sql)
+        // console.log(sql)
         const [r2] = await db.query(sql)
         r2.forEach(el=>{
             el.date = moment(el.date).format('YYYY-MM-DD')
@@ -88,16 +88,16 @@ router.get('/getRating', async (req, res)=> {
 
 
 router.post('/add',async(req,res)=>{
-    const sql = "INSERT INTO `rating`(`sid`, `product_sid`, `name`, `email`, `skin_type`, `skin`, `rating`, `title`, `review`, `date`) VALUES (NULL,1,?,?,2,?,?,?,?,NOW())";
+    const sql = "INSERT INTO `rating`(`sid`, `product_sid`, `name`, `email`, `skin_type`, `skin`, `rating`, `title`, `review`, `date`) VALUES (NULL,1,?,?,0,?,?,?,?,NOW())";
     const [result] = await db.query(sql,[
       req.body.name,
       req.body.email,
-      req.body.rating,
       req.body.skin,
+      req.body.rating,
       req.body.title,
       req.body.review
     ]);
-    console.log(result);
+    // console.log(result);
     if (result.affectedRows === 1) {
         return res.json({ message: "新增成功" });
       }

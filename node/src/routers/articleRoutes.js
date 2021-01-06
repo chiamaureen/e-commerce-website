@@ -33,7 +33,7 @@ router.use('/forList',jsonParser,(req,res)=>{
         for(let i of results){
             i.createTime = moment(i.createTime).format("YYYY-MM-DD")
         }
-        console.log(req.body)
+        // console.log(req.body)
        
         res.json(results)
     })
