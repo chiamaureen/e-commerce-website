@@ -209,13 +209,14 @@ useEffect(()=>{
                         //   // console.log(newCart)
                         //   const addItem = [data, ...newCart]
                         //   localStorage.setItem('cart', JSON.stringify(addItem))
-                       
+                        if (item.amount === 1) return
+                          updateCartToLocalStorage(item, false)
                         //   getCartFromLocalStorage()
                           //navbar購物車旁的數字
                           // setCartItems(JSON.parse(localStorage.getItem('cart')).length)
                        }}
                        >
-                         <AiOutlinePlusCircle style={{marginTop:'-13px'}}/>
+                         <AiOutlineMinusCircle style={{marginTop:'-13px'}}/>
                          </button>
                        
                       <div className="amount-box">
@@ -239,7 +240,7 @@ useEffect(()=>{
                         getCartFromLocalStorage()
                       }}
                        >
-                         <AiOutlineMinusCircle style={{marginTop:'-13px'}}/>
+                         <AiOutlinePlusCircle style={{marginTop:'-13px'}}/>
                          </button>
                       {/* <Link
                         onClick={() => updateCartToLocalStorage(item, true)}
