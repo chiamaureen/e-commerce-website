@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Rate } from 'antd'
-function Introduction() {
+function Introduction(props) {
   const [amount, setAmount] = useState(1)
   const [fix,setFix]=useState(false)
+  const {setCartItems}=props
   const data = {
     sid: 25,
     name: '奇蹟辣木油',
@@ -86,11 +87,13 @@ window.addEventListener('scroll',fixIntroduction)
                 onClick={() => {
                   if (localStorage.cart == null) {
                     localStorage.setItem('cart', JSON.stringify([data]))
+                    setCartItems(JSON.parse(localStorage.getItem('cart')).length)
                   } else {
                     const newCart = JSON.parse(localStorage.getItem('cart'))
                     console.log(newCart)
                     const addItem = [data, ...newCart]
                     localStorage.setItem('cart', JSON.stringify(addItem))
+                    setCartItems(JSON.parse(localStorage.getItem('cart')).length)
                   }
                 }}
               >

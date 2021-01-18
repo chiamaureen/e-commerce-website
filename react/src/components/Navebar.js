@@ -10,7 +10,7 @@ import { useEffect } from 'react'
 function Navbar(props) {
   const [click, setClick] = useState(false)
   const [dropdown, setDropdown] = useState(false)
-  const { setisAuth, isAuth,cartItems} = props
+  const { setisAuth, isAuth,cartItems,setCartItems } = props
   const [loginModalShow, setLoginModalShow] = useState(false)
 
   const handleClick = () => setClick(!click)
@@ -93,7 +93,7 @@ function Navbar(props) {
               }}
             >
               <i class="fas fa-shopping-cart"></i>
-              <Badge variant="success" pill style={{fontSize:'9px'}}>{cartItems}</Badge>
+              <Badge variant="success" pill style={{fontSize:'9px'}}>{cartItems.length !== 0 ? cartItems : ''}</Badge>
             </Link>
             {/* <Button variant="primary">
               Profile <Badge variant="light">{cartItems}</Badge>

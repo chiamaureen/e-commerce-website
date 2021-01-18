@@ -8,7 +8,7 @@ import Comment from '../components/comment/Comment'
 function ProductList(props) {
   const [myData, setData] = useState()
   // const [ScrollY, setScrollY] = useState()
-  const { isAuth } = props
+  const { isAuth,setCartItems } = props
   const getData = async () => {
     const res = await fetch('http://localhost:3000/product/get-db', {
       method: 'POST',
@@ -71,7 +71,7 @@ function ProductList(props) {
   // })
   return (
     <>
-      <Main />
+      <Main setCartItems={setCartItems}/>
       <Comment isAuth={isAuth} />
       <OtherSell />
     </>

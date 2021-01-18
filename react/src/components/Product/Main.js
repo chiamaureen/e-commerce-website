@@ -1,12 +1,13 @@
 import Product from './Prosuct'
 import Introduction from './Introduction'
 
-function Main() {
+function Main(props) {
+  const {setCartItems}=props
   return (
     <>
       <main class="product-detail-main">
         <Product />
-        <Introduction />
+        <Introduction setCartItems={setCartItems}/>
       </main>
     </>
   )

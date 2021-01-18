@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-
+import{Button}from 'react-bootstrap'
 import PaymentInfoBtn from './PaymentInfoBtn'
+import { AiOutlinePlusCircle ,AiOutlineMinusCircle} from "react-icons/ai";
 
 function CartContent(props) {
   const { isAuth,cartItems,setCartItems} = props
@@ -13,8 +14,6 @@ function CartContent(props) {
   function getCartFromLocalStorage() {
     const newCart = localStorage.getItem('cart') || '[]'
 
-    // console.log(JSON.parse(newCart))
-
     setMycart(JSON.parse(newCart))
   }
 
@@ -22,33 +21,42 @@ function CartContent(props) {
     getCartFromLocalStorage()
   }, [])
 
-  // componentDidUpdate
+ // mycartDisplay運算
+ function cartDisplay(){
+  let newMycartDisplay = []
+  //mycartDisplay
+  for (let i = 0; i < mycart.length; i++) {
+    const index = newMycartDisplay.findIndex(
+      (value) => value.sid === mycart[i].sid
+    )
+    if (index !== -1) {
+      newMycartDisplay[index].amount += mycart[i].amount
+    } else {
+      const newItem = { ...mycart[i] }
+      newMycartDisplay = [...newMycartDisplay, newItem]
+    }
+  }
+  setMycartDisplay(newMycartDisplay)
+  // console.log(newMycartDisplay)
+}
+useEffect(()=>{
+  cartDisplay()
+},[mycart])
   useEffect(() => {
-    // mycartDisplay運算
     let newMycartDisplay = []
 
-    //尋找mycartDisplay
+    //mycartDisplay
     for (let i = 0; i < mycart.length; i++) {
-      //尋找mycartDisplay中有沒有此mycart[i].id
-      //有找到會返回陣列成員的索引值
-      //沒找到會返回-1
       const index = newMycartDisplay.findIndex(
         (value) => value.sid === mycart[i].sid
       )
-      //有的話就數量+1
       if (index !== -1) {
-        //每次只有加1個數量
-        //newMycartDisplay[index].amount++
-        //假設是加數量的
         newMycartDisplay[index].amount += mycart[i].amount
       } else {
-        //沒有的話就把項目加入，數量為1
         const newItem = { ...mycart[i] }
         newMycartDisplay = [...newMycartDisplay, newItem]
       }
     }
-
-    // console.log(newMycartDisplay)
     setMycartDisplay(newMycartDisplay)
   }, [mycart])
 
@@ -72,7 +80,7 @@ function CartContent(props) {
     setMycart(currentCart)
   }
 
-  //刪除
+  // 刪除
   const removeCartToLocalStorage = (item) => {
     // console.log(item)
     const currentCart = JSON.parse(localStorage.getItem('cart')) || []
@@ -130,6 +138,8 @@ function CartContent(props) {
     localStorage.setItem('mytotal', JSON.stringify(myTotal))
   }
 
+
+
   const display = (
     <>
       <div className="shop-details">
@@ -151,7 +161,7 @@ function CartContent(props) {
                   <tr>
                     <td>
                       <img src={item.picture} alt="" />
-                      &emsp;<span>{item.name}</span>
+                      <span>{item.name}</span>
                     </td>
                     <td>
                       <span>無</span>
@@ -160,7 +170,7 @@ function CartContent(props) {
                       <span>NT$ {item.price}</span>
                     </td>
                     <td className="amount">
-                      <Link
+                      {/* <Link
                         onClick={() => {
                           if (item.amount === 1) return
                           updateCartToLocalStorage(item, false)
@@ -172,12 +182,66 @@ function CartContent(props) {
                           alt=""
                         />
                       </Link>
-                      &ensp;
+                       */}
+                       {/* 新增 */}
+                       <button 
+                       className="btn del-btn cart-btn" 
+                       style={{padding:'3px',margin:'3px',height:'26px'}} 
+                       onClick={()=>{
+                        // let newDisplay = mycartDisplay.map((value) => {
+                        //   if (item.sid === value.sid) {
+                        //     value.amount ++;
+                        //     return item;
+                        //   }
+                        //   return item;
+                        // });
+                        // setMycartDisplay(newDisplay); 
+                        // localStorage.setItem('cart',JSON.stringify(newDisplay));
+                        // getCartFromLocalStorage()
+                        // const data = {
+                        //   sid: item.sid,
+                        //   name: item.name,
+                        //   picture: item.picture,
+                        //   price: item.price,
+                        //   amount: 1,
+                        // }
+                        //   const newCart = JSON.parse(localStorage.getItem('cart'))
+                        //   // console.log(newCart)
+                        //   const addItem = [data, ...newCart]
+                        //   localStorage.setItem('cart', JSON.stringify(addItem))
+                       
+                        //   getCartFromLocalStorage()
+                          //navbar購物車旁的數字
+                          // setCartItems(JSON.parse(localStorage.getItem('cart')).length)
+                       }}
+                       >
+                         <AiOutlinePlusCircle style={{marginTop:'-13px'}}/>
+                         </button>
+                       
                       <div className="amount-box">
                         <span>{item.amount}</span>
                       </div>
-                      &ensp;
-                      <Link
+                      <button className="btn del-btn cart-btn" 
+                      style={{padding:'3px',margin:'3px',height:'26px'}}
+                      id={item.sid}
+                       onClick={() => {
+                        // let newDisplay = mycartDisplay.map((value) => {
+                        //   if (item.sid === value.sid) {
+                        //     item.amount > 1 ? value.amount-- : (value.amount = 1);
+                        //     return item;
+                        //   }
+                        //   return item;
+                        // });
+                    
+                        // setMycartDisplay(newDisplay); 
+                        // localStorage.setItem('cart',JSON.stringify(newDisplay));
+                        updateCartToLocalStorage(item, true)
+                        getCartFromLocalStorage()
+                      }}
+                       >
+                         <AiOutlineMinusCircle style={{marginTop:'-13px'}}/>
+                         </button>
+                      {/* <Link
                         onClick={() => updateCartToLocalStorage(item, true)}
                       >
                         <img
@@ -185,7 +249,7 @@ function CartContent(props) {
                           src="./images/add_circle_outline.svg"
                           alt=""
                         />
-                      </Link>
+                      </Link> */}
                     </td>
                     <td>
                       <span>NT$ {item.amount * item.price}</span>
@@ -217,7 +281,7 @@ function CartContent(props) {
                   <div className="discount-box">
                     <span>優惠促銷</span>
                   </div>
-                  &ensp;<span>全站滿 600 元，即享免運優惠</span>
+                 <span>全站滿 600 元，即享免運優惠</span>
                 </td>
               </tr>
             </tbody>
@@ -290,7 +354,6 @@ function CartContent(props) {
               </div>
               <div className="d-flex justify-content-between">
                 <p>優惠：</p>
-                <p></p>
               </div>
               <hr />
               <div className="d-flex justify-content-between">

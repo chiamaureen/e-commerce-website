@@ -5,6 +5,7 @@ import ControlledCarousel from './ControlledCarousel'
 function Rows(props) {
   const { v, i, isAuth,cartItems,setCartItems } = props
   const [fav, setFav] = useState(false)
+ 
   const data = {
     sid: v.sid,
     name: v.name,
@@ -31,18 +32,6 @@ function Rows(props) {
   useEffect(() => {
     favHandle(v.sid)
   }, [])
-  
-
-  function getCartItems(){
-    // const countCartItems=JSON.parse(localStorage.getItem('mytotal'))
-    // const currentCartItems = countCartItems[0]
-    const countCartItems=JSON.parse(localStorage.getItem('cart'))
-    const currentCartItems = countCartItems.length
-    setCartItems(currentCartItems)
-  } 
-  useEffect(()=>{
-    getCartItems()
-  },[cartItems])
 
   const link = '/ProductList/' + v.sid
   return (
@@ -150,7 +139,6 @@ function Rows(props) {
           )}
           <button
             onClick={() => {
-              // getCartItems()
               const data = {
                 sid: v.sid,
                 name: v.name,
@@ -160,13 +148,15 @@ function Rows(props) {
               }
               if (localStorage.cart == null) {
                 localStorage.setItem('cart', JSON.stringify([data]))
-                localStorage.setItem('mytotal', JSON.stringify([data.amount]))
+                //navbar購物車旁的數字
+                setCartItems(JSON.parse(localStorage.getItem('cart')).length)
               } else {
                 const newCart = JSON.parse(localStorage.getItem('cart'))
                 // console.log(newCart)
                 const addItem = [data, ...newCart]
                 localStorage.setItem('cart', JSON.stringify(addItem))
-                localStorage.setItem('mytotal', JSON.stringify([data.amount]))
+                //navbar購物車旁的數字
+                setCartItems(JSON.parse(localStorage.getItem('cart')).length)
               }
             }}
           >

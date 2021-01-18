@@ -38,7 +38,7 @@ function App() {
   //設定登入登出的狀態
   const [isAuth, setisAuth] = useState()
 
-  const [cartItems, setCartItems] = useState(0)
+  const [cartItems, setCartItems] = useState([])
  
 
   useEffect(() => {
@@ -50,17 +50,12 @@ function App() {
   }
   }, [])
 
-  function getCartItems(){
-    const countCartItems=JSON.parse(localStorage.getItem('mytotal'))
-    const currentCartItems = countCartItems[0]
-    // const countCartItems=localStorage.getItem('cart')
-    // const currentCartItems = countCartItems.length
-    setCartItems(currentCartItems)
-  } 
-  useEffect(()=>{
-    getCartItems()
-  },[])
-
+  // const navCartItems = ()=>{
+  //   setCartItems(JSON.parse(localStorage.getItem('cart')).length)
+  // }
+  // useEffect(() => {
+  //   navCartItems()
+  // }, [])
 
   return (
     <Router>
@@ -80,7 +75,7 @@ function App() {
               <Product isAuth={isAuth} />
             </Route>
             <Route path="/ProductList">
-              <ProductList isAuth={isAuth} />
+              <ProductList isAuth={isAuth} setCartItems={setCartItems}/>
             </Route>
             <Route path="/ShopList/:category?/:sid?/">
               <ShopList isAuth={isAuth} cartItems={cartItems} setCartItems={setCartItems}/>

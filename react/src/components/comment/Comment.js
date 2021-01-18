@@ -106,7 +106,7 @@ function Comment(props) {
     </>
   )
   const paginate = (pageNumber) => {
-    console.log(pageNumber)
+    // console.log(pageNumber)
     setCurrentPage(Number(pageNumber))
     let skinFilteredComment = fiterSkin(comment, selectedSkin)
     setPaging(skinFilteredComment)
@@ -181,12 +181,12 @@ function Comment(props) {
       }),
     })
 
-    console.log(JSON.stringify(newData))
+    // console.log(JSON.stringify(newData))
 
     const response = await fetch(request)
     const data = await response.json()
 
-    console.log('伺服器回傳的json資料', data)
+    // console.log('伺服器回傳的json資料', data)
     getCommentFromServer()
     getRating()
     //警示
