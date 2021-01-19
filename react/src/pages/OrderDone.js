@@ -79,10 +79,10 @@ function OrderDone(props) {
         </div>
         <OrderListCard price={price} amount={amount} />
         <div className="row col-12 mb-5 justify-content-center">
-          <Link to="/ShopList">
+          <a href="/ShopList">
             <BackToShopBtn
               onClick={removeCart()}/>
-          </Link>
+          </a>
         </div>
       </div>
     </>

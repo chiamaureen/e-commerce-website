@@ -205,15 +205,7 @@ useEffect(()=>{
                        >
                          <AiOutlinePlusCircle style={{marginTop:'-13px'}}/>
                          </button>
-                      {/* <Link
-                        onClick={() => updateCartToLocalStorage(item, true)}
-                      >
-                        <img
-                          className="cart-icon"
-                          src="./images/add_circle_outline.svg"
-                          alt=""
-                        />
-                      </Link> */}
+              
                     </td>
                     <td>
                       <span>NT$ {item.amount * item.price}</span>
