@@ -75,7 +75,7 @@ useEffect(()=>{
     }
 
     localStorage.setItem('cart', JSON.stringify(currentCart))
-
+    const amount = localStorage.getItem('mytotal')[0]
     // 設定資料
     setMycart(currentCart)
   }
@@ -170,50 +170,13 @@ useEffect(()=>{
                       <span>NT$ {item.price}</span>
                     </td>
                     <td className="amount">
-                      {/* <Link
-                        onClick={() => {
-                          if (item.amount === 1) return
-                          updateCartToLocalStorage(item, false)
-                        }}
-                      >
-                        <img
-                          className="cart-icon"
-                          src="./images/remove_circle_outline.svg"
-                          alt=""
-                        />
-                      </Link>
-                       */}
-                       {/* 新增 */}
-                       <button 
+                      <button 
                        className="btn del-btn cart-btn" 
                        style={{padding:'3px',margin:'3px',height:'26px'}} 
                        onClick={()=>{
-                        // let newDisplay = mycartDisplay.map((value) => {
-                        //   if (item.sid === value.sid) {
-                        //     value.amount ++;
-                        //     return item;
-                        //   }
-                        //   return item;
-                        // });
-                        // setMycartDisplay(newDisplay); 
-                        // localStorage.setItem('cart',JSON.stringify(newDisplay));
-                        // getCartFromLocalStorage()
-                        // const data = {
-                        //   sid: item.sid,
-                        //   name: item.name,
-                        //   picture: item.picture,
-                        //   price: item.price,
-                        //   amount: 1,
-                        // }
-                        //   const newCart = JSON.parse(localStorage.getItem('cart'))
-                        //   // console.log(newCart)
-                        //   const addItem = [data, ...newCart]
-                        //   localStorage.setItem('cart', JSON.stringify(addItem))
                         if (item.amount === 1) return
                           updateCartToLocalStorage(item, false)
-                        //   getCartFromLocalStorage()
-                          //navbar購物車旁的數字
-                          // setCartItems(JSON.parse(localStorage.getItem('cart')).length)
+                          // getCartFromLocalStorage()
                        }}
                        >
                          <AiOutlineMinusCircle style={{marginTop:'-13px'}}/>

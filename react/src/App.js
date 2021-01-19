@@ -51,11 +51,11 @@ function App() {
   }, [])
 
   // const navCartItems = ()=>{
-  //   setCartItems(JSON.parse(localStorage.getItem('cart')).length)
+  //     setCartItems(JSON.parse(localStorage.getItem('cart')).length)
   // }
   // useEffect(() => {
   //   navCartItems()
-  // }, [])
+  // }, [cartItems])
 
   return (
     <Router>
