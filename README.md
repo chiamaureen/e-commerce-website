@@ -12,3 +12,7 @@
   * 商品評論區 (CRUD)
   * 願望清單系統 (localstorage)
   * 購物車 (CR)
+  
+  
+## 安裝 : npm install
+## 啟動 : yarn start/npm start
