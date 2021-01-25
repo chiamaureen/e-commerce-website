@@ -16,7 +16,7 @@ function MyCarousel() {
 
       <Carousel effect="fade" autoplay>
         <div className="banner">
-          <img style={contentStyle} src="images/1-5.png" alt="" />
+          <img style={contentStyle} src="images/1-1.png" alt="" />
         </div>
         <div className="banner">
           <img style={contentStyle} src="images/2.jpg" alt="" />
