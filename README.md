@@ -1,7 +1,7 @@
 # e-commerce-website
 ## 艸艸了事電商網站
 
-* 基礎技術支持: html5(websocket) + css
+* 基礎技術支持: html5 + css
 * 前端技術支持: react.js  + javaScript(ES6) + jquery + bootstrap
 * 後端技術支持: node.js + express.js + mysql 
 * 前端套件支持: react bootstrap + antd
